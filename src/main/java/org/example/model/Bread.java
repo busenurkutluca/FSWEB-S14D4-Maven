@@ -1,24 +1,16 @@
 package org.example.model;
 
-public class Bread extends ProductForSale{
+public class Bread extends ProductForSale {
+    private int weightInGrams;
 
-    private String flourType;
-
-    public Bread(String type, int price, String description, String flourType) {
+    public Bread(String type, double price, String description) {
         super(type, price, description);
-        this.flourType = flourType;
-    }
-
-    public String getFlourType() {
-        return flourType;
+        this.weightInGrams = weightInGrams;
     }
 
     @Override
     public void showDetails() {
-        System.out.println("Bread Details: ");
-        System.out.println("Type: " + getType());
-        System.out.println("Price: " + getPrice());
-        System.out.println("Description: " + getDescription());
-        System.out.println("Flour Type: " + flourType);
+        System.out.println("Product: " + getType() + ", Price: $" + getPrice() + ", Description: " + getDescription() +
+                ", Weight: " + weightInGrams + " grams");
     }
 }

@@ -1,23 +1,16 @@
 package org.example.model;
 
-public class Coke extends ProductForSale{
-    private boolean isSugarFree;
+public class Coke extends ProductForSale {
+    private int volumeInMl;
 
-    public Coke(String type, int price, String description, boolean isSugarFree) {
+    public Coke(String type, double price, String description) {
         super(type, price, description);
-        this.isSugarFree = isSugarFree;
-    }
-
-    public boolean isSugarFree() {
-        return isSugarFree;
+        this.volumeInMl = volumeInMl;
     }
 
     @Override
     public void showDetails() {
-        System.out.println("Coke Details: ");
-        System.out.println("Type: " + getType());
-        System.out.println("Price: " + getPrice());
-        System.out.println("Description: " + getDescription());
-        System.out.println("Sugar-Free: " + isSugarFree);
+        System.out.println("Product: " + getType() + ", Price: $" + getPrice() + ", Description: " + getDescription() +
+                ", Volume: " + volumeInMl + " ml");
     }
 }

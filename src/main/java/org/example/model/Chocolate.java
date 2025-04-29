@@ -1,24 +1,16 @@
 package org.example.model;
 
-public class Chocolate extends ProductForSale{
+public class Chocolate extends ProductForSale {
+    private double weightInGrams;
 
-    private double milk;
-
-    public Chocolate(String description, int price, String type, double milk) {
-        super(description, price, type);
-        this.milk=milk;
-    }
-
-    public double getMilk() {
-        return milk;
+    public Chocolate(String type, double price, String description) {
+        super(type, price, description);
+        this.weightInGrams = weightInGrams;
     }
 
     @Override
     public void showDetails() {
-        System.out.println("Chocolate Details: ");
-        System.out.println("Type: " + getType());
-        System.out.println("Price: " + getPrice());
-        System.out.println("Description: " + getDescription());
-        System.out.println("Milk: " + getMilk());
+        System.out.println("Product: " + getType() + ", Price: $" + getPrice() + ", Description: " + getDescription() +
+                ", Weight: " + weightInGrams + " grams");
     }
 }
